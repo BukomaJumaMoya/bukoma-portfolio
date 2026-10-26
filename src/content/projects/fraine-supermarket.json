@@ -1,0 +1,27 @@
+{
+  "order": 7,
+  "featured": false,
+  "live": false,
+  "slug": "fraine-supermarket",
+  "title": "Fraine Supermarket",
+  "org": "Fraine Supermarket",
+  "period": "2026",
+  "role": "Design and build",
+  "kind": "mobile",
+  "status": "Shipped",
+  "summary": "A supermarket app rebuilt so pickup and delivery come first. iOS and Android from one codebase, across five branches.",
+  "problem": "A supermarket with five branches had an app that read like a catalogue. Customers weren't using it for pickup or delivery.",
+  "approach": "Complete redesign and rebuild on one codebase for both platforms, with a motion-led interface and pickup and delivery treated as the primary flows rather than an afterthought.",
+  "highlights": [
+    "Full redesign and rebuild for iOS and Android from a single codebase.",
+    "Pickup and delivery built as first-class flows.",
+    "Motion-led interface across five branches."
+  ],
+  "outcome": {
+    "label": "Coverage",
+    "value": "Five branches, one codebase"
+  },
+  "stack": ["React Native", "Expo", "iOS", "Android"],
+  "pipeline": ["Expo app", "Branch catalogue", "Cart", "Pickup", "Delivery"],
+  "links": []
+}

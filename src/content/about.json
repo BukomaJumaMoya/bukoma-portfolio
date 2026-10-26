@@ -1,0 +1,55 @@
+{
+  "engagements": [
+    {
+      "title": "Employed, remote",
+      "body": "Backend or full-stack on a product team. Most valuable where correctness and latency matter: pipelines, permissions, reporting, money.",
+      "points": ["Overlaps European mornings and US East Coast afternoons", "Written-first: decision records, documentation, async updates"]
+    },
+    {
+      "title": "Architecture",
+      "body": "Whave hired me to design a system, not build it. Schema, API surface, failure modes, written up so your team can execute.",
+      "points": ["Build-versus-buy analysis", "Technical review of proposals and vendor quotes", "Plain-language briefings for non-technical boards"]
+    },
+    {
+      "title": "Build and hand over",
+      "body": "A defined system, built to a spec I help write, delivered with documentation and transferred to your team.",
+      "points": [
+        "Discovery and written specification before any code",
+        "Database design, API, front end, deployment",
+        "Handover documentation and a walkthrough with your team"
+      ]
+    },
+    {
+      "title": "Systems for member organisations",
+      "body": "Clubs, associations, districts and NGOs. Attendance, membership, dues, donations, reporting and awards. I've built for these problems repeatedly and understand them from the inside.",
+      "points": [
+        "Multi-tenant platforms with per-organisation branding",
+        "Assessment frameworks and scoring engines",
+        "Reporting and exports that survive an audit"
+      ]
+    },
+    {
+      "title": "Rescue",
+      "body": "Something exists and isn't working. I audit it, tell you honestly whether to fix or replace, then do it.",
+      "points": ["Architecture and data-protection review", "Build, fix or replace recommendation with reasoning", "Migration plan if you decide to move"]
+    }
+  ],
+  "process": [
+    {
+      "title": "Conversation",
+      "body": "Thirty minutes. What you're trying to do, what's in the way, and whether I'm the right person. Sometimes I'm not, and I'll say so."
+    },
+    {
+      "title": "Written scope",
+      "body": "Before anything is built: what's included, what isn't, what it costs and when it lands. If we disagree, we disagree on paper, cheaply."
+    },
+    {
+      "title": "Build in the open",
+      "body": "Regular demos of working software, not status reports. You see it as it becomes real and can change your mind while changing it is cheap."
+    },
+    {
+      "title": "Handover",
+      "body": "Documentation, credentials, a walkthrough, and a support window. The goal is that you don't need me afterwards."
+    }
+  ]
+}

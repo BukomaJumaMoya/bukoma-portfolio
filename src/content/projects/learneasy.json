@@ -1,0 +1,29 @@
+{
+  "order": 6,
+  "featured": false,
+  "live": false,
+  "slug": "learneasy",
+  "title": "LearnEasy",
+  "org": "Personal project",
+  "period": "Mar – Jun 2024",
+  "role": "Full-stack",
+  "kind": "platform",
+  "status": "Personal project",
+  "summary": "Peer learning platform with genuinely different permissions for students, facilitators and administrators.",
+  "problem": "Collaborative learning tools tend to assume one kind of user. Students, facilitators and administrators need genuinely different permissions over the same data.",
+  "approach": "Role-based access control designed in from the start, a service-layer backend with caching, and real-time interaction over sockets. Containerised so it deploys the same everywhere.",
+  "highlights": [
+    "Full-stack MERN platform with RBAC across three user types.",
+    "Service-layer backend with MongoDB and Redis caching.",
+    "Real-time interaction over Socket.IO.",
+    "CI/CD pipelines and containerised deployment on Docker and Kubernetes.",
+    "Secure coding throughout: bcrypt, TLS, CSRF and XSS protection."
+  ],
+  "outcome": {
+    "label": "Architecture",
+    "value": "RBAC across three roles, containerised"
+  },
+  "stack": ["MongoDB", "Express", "React", "Node.js", "Redis", "Socket.IO", "Kubernetes"],
+  "pipeline": ["React", "RBAC across 3 roles", "Express services", "Socket.IO", "Redis", "MongoDB"],
+  "links": []
+}

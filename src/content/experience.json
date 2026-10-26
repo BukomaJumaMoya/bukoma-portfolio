@@ -1,0 +1,165 @@
+{
+  "roles": [
+    {
+      "when": "May 2025 → now",
+      "title": "R&D Software Developer",
+      "org": "Auri Energy Limited",
+      "note": "Industrial IoT, Cetus Central",
+      "current": true
+    },
+    {
+      "when": "Feb 2025",
+      "title": "System Architect & Planner",
+      "org": "Whave Solutions Limited",
+      "note": "Smart water dispenser system"
+    },
+    {
+      "when": "Nov 2023 – Feb 2025",
+      "title": "Software Developer Intern",
+      "org": "Shamos Tech Solutions",
+      "note": "SUDI marketplace and KauntaBook"
+    },
+    {
+      "when": "Jun – Aug 2023",
+      "title": "IT Intern",
+      "org": "Kampala Capital City Authority",
+      "note": "Java, Spring Boot, enterprise systems"
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2026",
+      "when": "In build",
+      "kind": "service",
+      "title": "Rotaract District Information System",
+      "body": "Building the reporting, membership and performance-assessment platform for a district of 68 clubs, replacing a system with no scoring engine and serious data-protection gaps.",
+      "tag": "Sole developer",
+      "project": "district-information-system"
+    },
+    {
+      "year": "2026",
+      "when": "2026",
+      "kind": "work",
+      "title": "Fraine Supermarket app",
+      "body": "Full redesign and rebuild of a supermarket's mobile application across five branches, handling pickup and delivery from one codebase.",
+      "tag": "Design and build",
+      "project": "fraine-supermarket"
+    },
+    {
+      "year": "2025",
+      "when": "May 2025 →",
+      "kind": "work",
+      "title": "R&D Software Developer",
+      "org": "Auri Energy Limited",
+      "body": "Cetus Central, an enterprise IoT platform for industrial energy. Designed a microservices architecture for real-time ingestion across distributed systems, built Kafka, Redis and PostgreSQL pipelines reaching sub-millisecond state reads, and integrated grid protocols including MQTT, OPC UA, Modbus and IEC 61850. Delivered six core modules covering power quality, fault outage, energy integrity, topology twin, communication and metering data.",
+      "tag": "Current role",
+      "project": "cetus-central"
+    },
+    {
+      "year": "2025",
+      "when": "Feb 2025",
+      "kind": "work",
+      "title": "System Architect & Planner",
+      "org": "Whave Solutions Limited",
+      "body": "Architected a smart water dispenser system combining ESP32 devices, RFID authentication and mobile money. Modelled the transaction-heavy schema, designed the API layer between devices, dashboards and mobile, and planned a fault-tolerant offline-first edge approach.",
+      "tag": "Architecture engagement",
+      "project": "smart-water-dispenser"
+    },
+    {
+      "year": "2025",
+      "when": "2025 →",
+      "kind": "service",
+      "title": "Immediate Past President",
+      "org": "Rotaract Club of Kitante",
+      "body": "Supporting incoming leadership without running the club. A role that is mostly about restraint.",
+      "tag": "Governance"
+    },
+    {
+      "year": "2025",
+      "when": "2025",
+      "kind": "service",
+      "title": "Appointed incoming PIME Chair",
+      "org": "Rotaract District 9218",
+      "body": "Planning, Implementation, Monitoring and Evaluation for a district of 68 clubs. Term begins July 2027.",
+      "tag": "District leadership"
+    },
+    {
+      "year": "2024",
+      "when": "2024 – 2025",
+      "kind": "service",
+      "title": "President",
+      "org": "Rotaract Club of Kitante",
+      "body": "Led the club through a full Rotary year: projects, fundraising, membership growth and the weekly discipline of showing up. Handed over with the structures in better shape than I found them.",
+      "tag": "President"
+    },
+    {
+      "year": "2024",
+      "when": "Mar – Jun 2024",
+      "kind": "work",
+      "title": "LearnEasy",
+      "body": "Peer learning platform on the MERN stack with role-based access for students, facilitators and admins, Redis caching, Socket.IO real-time communication, and containerised deployment on Docker and Kubernetes.",
+      "tag": "Personal project",
+      "project": "learneasy"
+    },
+    {
+      "year": "2024",
+      "when": "2024",
+      "kind": "milestone",
+      "title": "Graduated, Makerere University",
+      "body": "Bachelor of Information Systems and Technology, Systems Development.",
+      "tag": "Education"
+    },
+    {
+      "year": "2023",
+      "when": "Nov 2023 – Feb 2025",
+      "kind": "work",
+      "title": "Software Developer Intern",
+      "org": "Shamos Tech Solutions",
+      "body": "Built the SUDI marketplace on the PERN stack: REST APIs for users, listings, payments and chat, OAuth2 and JWT across every endpoint, WebSocket messaging, caching and performance tuning. Also built KauntaBook, an SME financial platform on serverless Firebase Functions handling transactions, invoicing and reporting.",
+      "tag": "First professional role",
+      "project": "sudi"
+    },
+    {
+      "year": "2023",
+      "when": "Jun – Aug 2023",
+      "kind": "work",
+      "title": "IT Intern",
+      "org": "Kampala Capital City Authority",
+      "body": "Contributed to system design and database normalisation for enterprise systems, built components of a queue management system in Java and Spring Boot, managed Active Directory and network infrastructure, and provided IT support.",
+      "tag": "Internship"
+    },
+    {
+      "year": "2022",
+      "when": "2022 – 2024",
+      "kind": "service",
+      "title": "Member, buddy group leader, board",
+      "org": "Rotaract Club of Kitante",
+      "body": "Worked up through the club rather than into it. Board responsibility is where I learned that attendance records, dues tracking and reporting were quietly eating everyone's time.",
+      "tag": "Progression"
+    },
+    {
+      "year": "2022",
+      "when": "June 2022",
+      "kind": "milestone",
+      "title": "Founded the Rotaract Club of Kitante",
+      "body": "Part of the founding group that formed the club from nothing. We recruited members, built the meeting rhythm, and set up the structures that let it survive its first year.",
+      "tag": "Founding member"
+    },
+    {
+      "year": "2022",
+      "when": "2022",
+      "kind": "milestone",
+      "title": "Began at Makerere University",
+      "body": "Information Systems and Technology, specialising in systems development.",
+      "tag": "Education"
+    },
+    {
+      "year": "Earlier",
+      "when": "2015 – 2020",
+      "kind": "milestone",
+      "title": "King's College Budo",
+      "body": "UCE 2015–2018, UACE 2019–2020.",
+      "tag": "Education"
+    }
+  ]
+}

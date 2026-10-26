@@ -1,0 +1,347 @@
+# Site editor (Sveltia CMS) for bukomajumamoya.vercel.app
+# Every save commits to GitHub; Vercel rebuilds and publishes the site in about a minute.
+
+backend:
+  name: github
+  repo: BukomaJumaMoya/bukoma-portfolio
+  branch: main
+  commit_messages:
+    create: 'Content: add {{collection}} “{{slug}}”'
+    update: 'Content: update {{collection}} “{{slug}}”'
+    delete: 'Content: remove {{collection}} “{{slug}}”'
+    uploadMedia: 'Content: upload “{{path}}”'
+    deleteMedia: 'Content: delete “{{path}}”'
+
+site_url: https://bukomajumamoya.vercel.app
+display_url: https://bukomajumamoya.vercel.app
+logo_url: /favicon.svg
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  # ------------------------------------------------------------------ Projects
+  - name: projects
+    label: Projects
+    label_singular: Project
+    description: Each project appears on the Work page and gets its own case study at /work/<URL name>.
+    folder: src/content/projects
+    extension: json
+    format: json
+    create: true
+    delete: true
+    slug: '{{fields.slug}}'
+    identifier_field: title
+    summary: '{{order}}. {{title}}, {{org}}'
+    sortable_fields: [order, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - name: slug
+        label: URL name
+        widget: string
+        hint: Lowercase words joined by hyphens. It becomes the address, for example /work/cetus-central. Avoid changing it once published, as old links will break.
+        pattern: ['^[a-z0-9]+(-[a-z0-9]+)*$', 'Use lowercase letters, numbers and single hyphens only']
+      - { name: order, label: Position on the Work page, widget: number, value_type: int, min: 1, hint: '1 shows first.' }
+      - { name: featured, label: Feature on the home page, widget: boolean, default: false, hint: Three featured projects look best. }
+      - { name: org, label: Organisation, widget: string }
+      - { name: period, label: Period, widget: string, hint: 'For example: 2025 → present, or Mar – Jun 2024' }
+      - { name: role, label: Your role, widget: string }
+      - name: kind
+        label: Category
+        widget: select
+        options:
+          - { label: Industrial & IoT, value: systems }
+          - { label: Platforms, value: platform }
+          - { label: Mobile, value: mobile }
+          - { label: Tools, value: tool }
+      - { name: status, label: Status label, widget: string, hint: 'For example: Shipped, In build, Current role, Open source' }
+      - { name: live, label: Show a pulsing status dot, widget: boolean, default: false, hint: For work that is live or ongoing right now. }
+      - { name: summary, label: One-sentence summary, widget: text, hint: Shown on cards and as the case study intro. }
+      - { name: problem, label: The problem, widget: text }
+      - { name: approach, label: The approach, widget: text }
+      - name: pipeline
+        label: System diagram stages
+        widget: list
+        hint: The stages of the system in order, as they appear in the animated diagram. Four to six short labels work best.
+        field: { name: stage, label: Stage, widget: string }
+      - name: highlights
+        label: What I did
+        widget: list
+        field: { name: point, label: Point, widget: text }
+      - name: outcome
+        label: Result
+        widget: object
+        fields:
+          - { name: label, label: Label, widget: string, hint: 'For example: Latency, Reach, Scope' }
+          - { name: value, label: Result, widget: string }
+      - name: stack
+        label: Technologies
+        widget: list
+        field: { name: tech, label: Technology, widget: string }
+      - { name: note, label: Side note, widget: text, required: false, hint: Optional. Shown under What I did. }
+      - name: links
+        label: Links
+        widget: list
+        required: false
+        hint: Optional. Source code, live site, write-ups.
+        fields:
+          - { name: label, label: Button text, widget: string }
+          - { name: url, label: Address, widget: string, pattern: ['^https?://', 'Start with https://'] }
+
+  # ------------------------------------------------------------- Site content
+  - name: site
+    label: Site content
+    description: Your details, page headlines, experience, skills, leadership and the About page.
+    format: json
+    files:
+      # ---------------------------------------------------------- Profile
+      - name: profile
+        label: Profile and contact
+        file: src/content/profile.json
+        fields:
+          - { name: name, label: Full name, widget: string }
+          - { name: shortName, label: Short name, widget: string }
+          - { name: title, label: Professional title, widget: string, hint: Used in search results and the browser tab. }
+          - { name: role, label: Current role, widget: string }
+          - { name: company, label: Current company, widget: string }
+          - { name: availability, label: Availability, widget: string, hint: 'Shown with a green dot, for example: Open to remote engineering roles' }
+          - { name: location, label: Location, widget: string }
+          - { name: timezone, label: Time zone, widget: string, hint: 'For the live clock. For Kampala: Africa/Kampala' }
+          - { name: utc, label: UTC offset label, widget: string, hint: 'For example: UTC+3' }
+          - { name: email, label: Email, widget: string }
+          - { name: phone, label: Phone, widget: string }
+          - { name: siteUrl, label: Site address, widget: string, hint: No slash at the end. }
+          - { name: cv, label: CV (PDF), widget: file, required: false, hint: Leave empty to hide every Download CV link. }
+          - { name: portrait, label: Portrait, widget: image, required: false, hint: A portrait photo. Leave empty to hide it. }
+          - name: socials
+            label: Profiles elsewhere
+            widget: list
+            summary: '{{fields.label}}'
+            fields:
+              - { name: label, label: Name, widget: string, hint: 'For example: GitHub' }
+              - { name: handle, label: Username, widget: string }
+              - { name: href, label: Address, widget: string }
+          - name: principles
+            label: How I work (principles)
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Principle, widget: string }
+              - { name: body, label: Explanation, widget: text }
+          - name: facts
+            label: Facts panel (Experience page)
+            widget: list
+            summary: '{{fields.k}}: {{fields.v}}'
+            hint: The first four appear on the Experience page.
+            fields:
+              - { name: k, label: Label, widget: string }
+              - { name: v, label: Value, widget: string }
+          - name: organisations
+            label: Organisations (About page)
+            widget: list
+            field: { name: organisation, label: Organisation, widget: string }
+
+      # ----------------------------------------------------------- Pages
+      - name: pages
+        label: Page headlines
+        file: src/content/pages.json
+        fields:
+          - name: home
+            label: Home
+            widget: object
+            fields:
+              - { name: statement, label: Opening statement, widget: text }
+              - { name: workIntro, label: Selected work intro, widget: text }
+          - name: work
+            label: Work
+            widget: object
+            fields:
+              - { name: title, label: Headline, widget: string }
+              - { name: sub, label: Introduction, widget: text }
+          - name: experience
+            label: Experience
+            widget: object
+            fields:
+              - { name: title, label: Headline, widget: string }
+              - { name: sub, label: Introduction, widget: text }
+          - name: leadership
+            label: Leadership
+            widget: object
+            fields:
+              - { name: title, label: Headline, widget: string }
+              - { name: sub, label: Introduction, widget: text }
+          - name: about
+            label: About
+            widget: object
+            fields:
+              - { name: title, label: Headline, widget: string }
+              - { name: sub, label: Introduction, widget: text }
+          - name: contact
+            label: Contact
+            widget: object
+            fields:
+              - { name: title, label: Headline, widget: string }
+              - { name: sub, label: Introduction, widget: text }
+          - name: footer
+            label: Footer
+            widget: object
+            fields:
+              - { name: line, label: Closing line, widget: string }
+
+      # ------------------------------------------------------------ Hero
+      - name: hero
+        label: Home page model (Devices, Services, Data)
+        file: src/content/hero.json
+        fields:
+          - name: layers
+            label: Layers
+            widget: list
+            min: 3
+            max: 3
+            hint: Exactly three, top to bottom. The names label the 3D plates.
+            summary: '{{fields.name}}'
+            fields:
+              - { name: name, label: Layer name, widget: string }
+              - { name: line, label: What I do at this layer, widget: text }
+              - name: tools
+                label: Tools
+                widget: list
+                field: { name: tool, label: Tool, widget: string }
+              - { name: project, label: Example project, widget: relation, collection: projects, value_field: slug, search_fields: [title], display_fields: [title] }
+
+      # ------------------------------------------------------ Experience
+      - name: experience
+        label: Experience
+        file: src/content/experience.json
+        fields:
+          - name: roles
+            label: Roles (Home page list)
+            widget: list
+            summary: '{{fields.org}}, {{fields.when}}'
+            fields:
+              - { name: when, label: Dates, widget: string }
+              - { name: title, label: Job title, widget: string }
+              - { name: org, label: Organisation, widget: string }
+              - { name: note, label: Short note, widget: string }
+              - { name: current, label: Current role, widget: boolean, default: false, required: false }
+          - name: timeline
+            label: Timeline (Experience page)
+            widget: list
+            summary: '{{fields.when}}: {{fields.title}}'
+            hint: Newest first. Work entries with an organisation also appear in the Career tab.
+            fields:
+              - { name: year, label: Year group, widget: string, hint: 'The heading this sits under, for example 2025 or Earlier' }
+              - { name: when, label: Dates, widget: string }
+              - name: kind
+                label: Type
+                widget: select
+                options:
+                  - { label: Engineering, value: work }
+                  - { label: Service & leadership, value: service }
+                  - { label: Education & milestones, value: milestone }
+              - { name: title, label: Title, widget: string }
+              - { name: org, label: Organisation, widget: string, required: false }
+              - { name: body, label: Description, widget: text }
+              - { name: tag, label: Tag, widget: string, hint: 'For example: Current role, Internship' }
+              - { name: project, label: Linked case study, widget: relation, collection: projects, value_field: slug, search_fields: [title], display_fields: [title], required: false }
+
+      # ---------------------------------------------------------- Skills
+      - name: skills
+        label: Stack and skills
+        file: src/content/skills.json
+        fields:
+          - name: layers
+            label: Skill areas
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: id, label: Short ID, widget: string, hint: 'Lowercase, no spaces, for example: data' }
+              - { name: label, label: Tab name, widget: string }
+              - { name: title, label: Heading, widget: string }
+              - { name: blurb, label: One-line description, widget: string }
+              - { name: depth, label: Depth (1 to 5), widget: number, value_type: int, min: 1, max: 5 }
+              - name: skills
+                label: Skills
+                widget: list
+                summary: '{{fields.name}}'
+                fields:
+                  - { name: name, label: Skill, widget: string }
+                  - { name: evidence, label: Evidence, widget: text, hint: Where you used it and what you built. }
+                  - { name: years, label: Years, widget: number, value_type: int, min: 1 }
+                  - { name: projects, label: Used in projects, widget: relation, collection: projects, value_field: slug, search_fields: [title], display_fields: [title], multiple: true, required: false }
+          - name: notMe
+            label: What I'd rather not do
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Explanation, widget: text }
+
+      # ------------------------------------------------------ Leadership
+      - name: leadership
+        label: Leadership and speaking
+        file: src/content/leadership.json
+        fields:
+          - name: timeline
+            label: Progression
+            widget: list
+            summary: '{{fields.step}}: {{fields.title}}'
+            hint: In order, oldest first. Each becomes a step and a card on the Leadership page.
+            fields:
+              - { name: when, label: Dates, widget: string }
+              - { name: step, label: Step label, widget: string, hint: 'One or two words, for example: President' }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Description, widget: text }
+              - { name: upcoming, label: Not started yet, widget: boolean, default: false, required: false }
+          - name: lessons
+            label: What running things taught me
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Explanation, widget: text }
+          - name: serviceBeyond
+            label: Service beyond the title
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Explanation, widget: text }
+          - name: talks
+            label: Speaking topics
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Explanation, widget: text }
+          - name: formats
+            label: Speaking formats
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Explanation, widget: text }
+
+      # ----------------------------------------------------------- About
+      - name: about
+        label: About and working together
+        file: src/content/about.json
+        fields:
+          - name: engagements
+            label: Ways to work together
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Description, widget: text }
+              - name: points
+                label: Details
+                widget: list
+                field: { name: point, label: Point, widget: string }
+          - name: process
+            label: How an engagement runs
+            widget: list
+            summary: '{{fields.title}}'
+            hint: Shown as numbered steps, in this order.
+            fields:
+              - { name: title, label: Step, widget: string }
+              - { name: body, label: Explanation, widget: text }

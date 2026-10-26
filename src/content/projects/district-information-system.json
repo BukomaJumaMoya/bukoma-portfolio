@@ -1,0 +1,29 @@
+{
+  "order": 3,
+  "featured": true,
+  "live": false,
+  "slug": "district-information-system",
+  "title": "District Information System",
+  "org": "Rotaract District 9218",
+  "period": "2026",
+  "role": "Sole developer",
+  "kind": "platform",
+  "status": "In build",
+  "summary": "Reporting, membership and performance assessment for a district of 68 clubs, replacing a listing website that was being used as an MIS.",
+  "problem": "A district of 68 clubs was running reporting on a platform assessed as a listing website used as a management information system. It had no scoring engine, no exports, and serious data-protection gaps.",
+  "approach": "Privacy and auditability as the foundation rather than features: every read scoped by club and role, every write logged, and the Rotary year modelled explicitly so history is archived, never overwritten.",
+  "highlights": [
+    "Data access scoped per club and per role.",
+    "Audit logging on every write.",
+    "Multi-factor authentication.",
+    "Annual rollover that archives a year rather than overwriting it.",
+    "Built and demonstrated on synthetic data; ownership transfers to the district on acceptance."
+  ],
+  "outcome": {
+    "label": "Reach",
+    "value": "68 clubs, one reporting standard"
+  },
+  "stack": ["TypeScript", "Node.js", "Prisma", "PostgreSQL"],
+  "pipeline": ["68 clubs", "MFA + role-scoped access", "TypeScript API", "Prisma", "PostgreSQL", "Audit log and yearly archive"],
+  "links": []
+}

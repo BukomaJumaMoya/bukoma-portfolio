@@ -1,0 +1,272 @@
+{
+  "layers": [
+    {
+      "id": "services",
+      "label": "Services & APIs",
+      "title": "Services & APIs",
+      "blurb": "Where most of my work happens.",
+      "depth": 5,
+      "skills": [
+        {
+          "name": "Node.js & Express",
+          "evidence": "REST and event-driven APIs in production at Auri Energy, Shamos Tech and on my own products.",
+          "years": 3,
+          "projects": ["cetus-central", "sudi"]
+        },
+        {
+          "name": "Spring Boot (Java)",
+          "evidence": "Queue management components at KCCA; enterprise service patterns.",
+          "years": 2
+        },
+        {
+          "name": "Microservices",
+          "evidence": "Architected the ingestion and processing services behind Cetus Central.",
+          "years": 2,
+          "projects": ["cetus-central"]
+        },
+        {
+          "name": "WebSockets / Socket.IO",
+          "evidence": "Real-time messaging and notifications in SUDI and LearnEasy.",
+          "years": 2,
+          "projects": ["sudi", "learneasy"]
+        },
+        {
+          "name": "GraphQL & REST",
+          "evidence": "Schema-first APIs documented with Swagger and OpenAPI.",
+          "years": 3
+        },
+        {
+          "name": "Serverless",
+          "evidence": "Firebase Functions backing KauntaBook's financial services.",
+          "years": 2,
+          "projects": ["kauntabook"]
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "title": "Data & pipelines",
+      "blurb": "Where the consequences live.",
+      "depth": 5,
+      "skills": [
+        {
+          "name": "PostgreSQL",
+          "evidence": "Transaction-heavy schema design, indexing and migrations. Query optimisation that moved response times measurably.",
+          "years": 3,
+          "projects": ["sudi", "smart-water-dispenser", "district-information-system"]
+        },
+        {
+          "name": "Kafka + Redis",
+          "evidence": "Low-latency pipelines for industrial telemetry, with sub-millisecond state reads.",
+          "years": 2,
+          "projects": ["cetus-central"]
+        },
+        {
+          "name": "MongoDB",
+          "evidence": "Service-layer architecture with Redis caching on LearnEasy.",
+          "years": 2,
+          "projects": ["learneasy"]
+        },
+        {
+          "name": "Time-series telemetry",
+          "evidence": "Storage strategy for high-frequency sensor and metering data.",
+          "years": 2,
+          "projects": ["cetus-central", "smart-water-dispenser"]
+        },
+        {
+          "name": "MySQL, Oracle, SQL Server",
+          "evidence": "Enterprise database work, including normalisation at KCCA.",
+          "years": 2
+        },
+        {
+          "name": "Firestore",
+          "evidence": "Real-time financial data with query and caching optimisation.",
+          "years": 2,
+          "projects": ["kauntabook"]
+        }
+      ]
+    },
+    {
+      "id": "iot",
+      "label": "Industrial & IoT",
+      "title": "Industrial & IoT",
+      "blurb": "The specialism most engineers don't have.",
+      "depth": 4,
+      "skills": [
+        {
+          "name": "MQTT / MQTT 5.0",
+          "evidence": "Device-to-cloud messaging across distributed industrial systems.",
+          "years": 2,
+          "projects": ["cetus-central"]
+        },
+        {
+          "name": "IEC 61850 MMS/GOOSE",
+          "evidence": "Grid-compliant substation communication in Cetus Central.",
+          "years": 1,
+          "projects": ["cetus-central"]
+        },
+        {
+          "name": "Modbus-TCP, OPC UA, DNP3-IP",
+          "evidence": "Protocol integration for power quality and metering modules.",
+          "years": 1,
+          "projects": ["cetus-central"]
+        },
+        {
+          "name": "Edge & offline-first",
+          "evidence": "Fault-tolerant design for environments where connectivity isn't a given.",
+          "years": 1,
+          "projects": ["smart-water-dispenser"]
+        },
+        {
+          "name": "ESP32 / RFID",
+          "evidence": "Smart water dispenser, with device authentication tied to mobile payments.",
+          "years": 1,
+          "projects": ["smart-water-dispenser"]
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Security",
+      "title": "Security",
+      "blurb": "Non-negotiable when the data has consequences.",
+      "depth": 4,
+      "skills": [
+        {
+          "name": "JWT & OAuth2 / OIDC",
+          "evidence": "Authentication across every endpoint on SUDI, KauntaBook and Cetus Central.",
+          "years": 3,
+          "projects": ["sudi", "kauntabook", "cetus-central"]
+        },
+        {
+          "name": "RBAC",
+          "evidence": "Role-scoped access for students, facilitators and admins; per-club isolation for a district.",
+          "years": 3,
+          "projects": ["learneasy", "district-information-system"]
+        },
+        {
+          "name": "bcrypt & SSL/TLS",
+          "evidence": "Secure credential storage and transport aligned to regulatory standards.",
+          "years": 3
+        },
+        {
+          "name": "Secure system design",
+          "evidence": "Designed to a compliance bar, not retrofitted to one: audit logs, MFA, scoped data access.",
+          "years": 2,
+          "projects": ["district-information-system"]
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud",
+      "title": "Cloud & delivery",
+      "blurb": "Getting it live and keeping it there.",
+      "depth": 4,
+      "skills": [
+        {
+          "name": "Docker & Kubernetes",
+          "evidence": "Containerised deployment, including zero-downtime releases on Azure.",
+          "years": 2,
+          "projects": ["cetus-central", "learneasy"]
+        },
+        {
+          "name": "CI/CD",
+          "evidence": "GitHub Actions pipelines that removed deployment friction at Shamos and Auri.",
+          "years": 3
+        },
+        {
+          "name": "Azure, GCP, AWS",
+          "evidence": "Cloud-native tooling, logging and monitoring.",
+          "years": 2
+        },
+        {
+          "name": "Testing",
+          "evidence": "Jest and Mocha suites reaching roughly 90% coverage on Cetus Central; Postman and Swagger for API contracts.",
+          "years": 3,
+          "projects": ["cetus-central"]
+        },
+        {
+          "name": "Git & Gitflow",
+          "evidence": "Structured branching, documented decisions, reviewable history.",
+          "years": 4
+        }
+      ]
+    },
+    {
+      "id": "interface",
+      "label": "Interface",
+      "title": "Interface",
+      "blurb": "What people actually touch.",
+      "depth": 3,
+      "skills": [
+        {
+          "name": "React & Redux",
+          "evidence": "Admin dashboards, marketplace front ends, and my own products, including this site.",
+          "years": 3
+        },
+        {
+          "name": "React Native / Expo",
+          "evidence": "Fraine Supermarket across five branches, iOS and Android from one codebase.",
+          "years": 1,
+          "projects": ["fraine-supermarket"]
+        },
+        {
+          "name": "Tailwind, Material UI, CSS",
+          "evidence": "Including hand-built design systems. This site runs on its own token-based Tailwind design system.",
+          "years": 3
+        }
+      ]
+    },
+    {
+      "id": "beyond",
+      "label": "Beyond code",
+      "title": "Beyond code",
+      "blurb": "The half that decides whether the software matters.",
+      "depth": 4,
+      "skills": [
+        {
+          "name": "System architecture",
+          "evidence": "Engaged by Whave Solutions specifically to architect and plan, not to implement.",
+          "years": 2,
+          "projects": ["smart-water-dispenser"]
+        },
+        {
+          "name": "Requirements & specification",
+          "evidence": "Translating stakeholder requirements into scalable features inside agile teams.",
+          "years": 3
+        },
+        {
+          "name": "Monitoring & evaluation",
+          "evidence": "Assessment framework design for a district of 68 clubs.",
+          "years": 2,
+          "projects": ["district-information-system"]
+        },
+        {
+          "name": "Technical writing",
+          "evidence": "API documentation, decision records, handover docs and proposals.",
+          "years": 3
+        }
+      ]
+    }
+  ],
+  "notMe": [
+    {
+      "title": "Deep data science",
+      "body": "I can build the pipeline and the dashboard. I am not your machine-learning engineer."
+    },
+    {
+      "title": "Native iOS or Android",
+      "body": "I build cross-platform. If you need Swift or Kotlin specifically, hire for it."
+    },
+    {
+      "title": "Design from scratch",
+      "body": "I have taste and I'll defend it, but I'm an engineer first. Give me a designer and we'll go faster."
+    },
+    {
+      "title": "Engineering management at scale",
+      "body": "I've worked in agile teams and shipped alone. I haven't run engineering at fifty people, and I'll say so."
+    }
+  ]
+}

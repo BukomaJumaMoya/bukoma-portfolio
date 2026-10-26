@@ -1,0 +1,115 @@
+{
+  "timeline": [
+    {
+      "when": "2022",
+      "title": "Founded the Rotaract Club of Kitante",
+      "step": "Founder",
+      "body": "Part of the founding group that formed the club from nothing. We recruited members, built the meeting rhythm, and set up the structures that let it survive its first year."
+    },
+    {
+      "when": "2022 – 2024",
+      "title": "Member, buddy group leader, board",
+      "step": "Board",
+      "body": "Worked up through the club rather than into it. Buddy group leadership first, then board responsibility, which is where I learned that attendance records, dues tracking and reporting were quietly eating everyone's time."
+    },
+    {
+      "when": "2024 – 2025",
+      "title": "President",
+      "step": "President",
+      "body": "Led the club through a full Rotary year: projects, fundraising, membership growth and the weekly discipline of actually showing up. Handed over to a successor with the structures in better shape than I found them."
+    },
+    {
+      "when": "2025 – present",
+      "title": "Immediate Past President",
+      "step": "Past president",
+      "body": "Supporting the incoming leadership without running the club. It's a role that is mostly about restraint."
+    },
+    {
+      "when": "2027 – 2028",
+      "title": "Incoming PIME Chair, District 9218",
+      "step": "District chair",
+      "body": "Planning, Implementation, Monitoring and Evaluation for a newly formed district of 68 clubs. Responsible for how the district plans its year, assesses club performance, and knows whether any of it worked.",
+      "upcoming": true
+    }
+  ],
+  "lessons": [
+    {
+      "title": "Adoption beats features",
+      "body": "A system nobody fills in is worse than a spreadsheet somebody does. Design for the tired volunteer at 10pm, not the power user."
+    },
+    {
+      "title": "Measurement changes behaviour",
+      "body": "The moment you score something, people optimise for the score. Choose what you measure as carefully as how you measure it."
+    },
+    {
+      "title": "Handover is the real test",
+      "body": "Anything that only works while you're there hasn't worked. Documentation and succession are part of the build, not an afterthought."
+    },
+    {
+      "title": "Data has consequences",
+      "body": "Membership records hold real people. Data protection isn't a compliance box. It's the difference between trust and a scandal."
+    }
+  ],
+  "serviceBeyond": [
+    {
+      "title": "Community projects",
+      "body": "Club-level service projects, fundraising and partnerships: the ordinary work that makes a club worth belonging to."
+    },
+    {
+      "title": "Mentorship",
+      "body": "Designing a district-wide Rotary–Rotaract mentorship programme, so newer members get access to people who have done it before."
+    },
+    {
+      "title": "Digital infrastructure",
+      "body": "Setting up the tools, donation pipeline and records that let volunteer organisations operate like real ones."
+    },
+    {
+      "title": "Governance",
+      "body": "Assessment frameworks, reporting standards and the unglamorous documents that keep a district honest."
+    }
+  ],
+  "talks": [
+    {
+      "title": "Why good systems still fail",
+      "body": "Adoption, not features. What actually determines whether an organisation uses the tool you gave it, drawn from replacing paper sign-in sheets in real clubs."
+    },
+    {
+      "title": "Measuring what matters",
+      "body": "Designing assessment frameworks that change behaviour in the direction you intended. What happens the moment you attach a score to something."
+    },
+    {
+      "title": "Data protection is not a checkbox",
+      "body": "What membership records actually contain, what goes wrong when they leak, and how to build a system that survives scrutiny."
+    },
+    {
+      "title": "Building for the volunteer",
+      "body": "Designing for people who are tired, unpaid, on a phone, and doing this at 10pm. The hardest user in software."
+    },
+    {
+      "title": "From club to district",
+      "body": "Founding an organisation, leading it and handing it over. What transfers, and what doesn't."
+    },
+    {
+      "title": "Shipping alone",
+      "body": "How one engineer takes a system from empty database to real users, and where that approach breaks down."
+    }
+  ],
+  "formats": [
+    {
+      "title": "Keynote or talk",
+      "body": "20 to 45 minutes, with or without slides. Best for conferences, district assemblies and university audiences."
+    },
+    {
+      "title": "Workshop",
+      "body": "Half or full day, hands-on. Teams leave with a document they wrote, not notes they'll never read."
+    },
+    {
+      "title": "Panel",
+      "body": "Technology, civic organisations, youth leadership. I'm useful on panels where someone needs to say the unglamorous thing."
+    },
+    {
+      "title": "Remote",
+      "body": "All of the above, delivered over video for audiences outside Uganda."
+    }
+  ]
+}

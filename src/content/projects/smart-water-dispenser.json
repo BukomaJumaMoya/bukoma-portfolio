@@ -1,0 +1,32 @@
+{
+  "order": 2,
+  "featured": true,
+  "live": false,
+  "slug": "smart-water-dispenser",
+  "title": "Smart Water Dispenser System",
+  "org": "Whave Solutions Limited",
+  "period": "2025",
+  "role": "System Architect & Planner",
+  "kind": "systems",
+  "status": "Architecture engagement",
+  "summary": "ESP32 devices, RFID authentication and mobile money joined by a secure API, designed offline-first for places where the network isn’t a given.",
+  "problem": "Water access points in low-connectivity areas need to authenticate users, meter usage and take payment, without assuming the network is up when someone turns the tap.",
+  "approach": "Treat the device as the source of truth while offline and the cloud as the reconciler: authenticate and meter at the edge, queue transactions locally, and sync when connectivity returns.",
+  "highlights": [
+    "Architected an IoT and cloud system joining ESP32 devices, RFID authentication and mobile money.",
+    "Defined the end-to-end flows: payments, credit and water usage tracking.",
+    "Modelled a transaction-heavy PostgreSQL schema and recommended time-series storage for telemetry.",
+    "Designed the secure API layer between devices, admin dashboards and the mobile portal.",
+    "Conceptualised a React admin dashboard and a mobile-friendly portal for balance checks and top-ups.",
+    "Evaluated and planned the mobile money integrations.",
+    "Specified a fault-tolerant, offline-first edge approach."
+  ],
+  "outcome": {
+    "label": "Scope",
+    "value": "End-to-end system design: payments, credit, usage"
+  },
+  "stack": ["System architecture", "ESP32", "RFID", "PostgreSQL", "Time-series", "Mobile money"],
+  "pipeline": ["ESP32 + RFID", "Offline-first edge queue", "Secure API", "PostgreSQL + time-series", "Mobile money", "Dashboards and mobile portal"],
+  "note": "Brought in to architect and plan, not to implement. The deliverable was a design the client’s team could execute.",
+  "links": []
+}

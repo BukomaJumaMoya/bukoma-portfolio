@@ -1,0 +1,29 @@
+{
+  "home": {
+    "statement": "I build systems that have to be right: real-time pipelines, distributed services and industrial IoT. Outside work I lead in Rotaract, as a club founder, past president and incoming district chair.",
+    "workIntro": "Three of eight systems, each described by the problem it solved before the tools it used."
+  },
+  "work": {
+    "title": "Problems first, stack second.",
+    "sub": "Anyone can list technologies. These are the problems they were pointed at: eight systems, each with a short case study."
+  },
+  "experience": {
+    "title": "The record, and the tools.",
+    "sub": "Where I've worked, what I did there and what I can do. Each claim points at something I built or designed."
+  },
+  "leadership": {
+    "title": "I've run the kind of institution I build for.",
+    "sub": "A club is a small institution. Running one teaches you what software can and cannot fix, and most of my engineering judgement came from it."
+  },
+  "about": {
+    "title": "Engineer. Also, organiser.",
+    "sub": "I build the systems that have to be right, not just running. And I've sat in the meetings where the numbers they produce get defended."
+  },
+  "contact": {
+    "title": "Tell me what you're building.",
+    "sub": "Open to remote engineering roles, architecture engagements and speaking invitations. I reply within two working days."
+  },
+  "footer": {
+    "line": "If it has to be right, let's talk."
+  }
+}

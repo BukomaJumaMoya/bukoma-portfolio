@@ -1,0 +1,240 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ */
+/* Tokens. Components only ever use the Tailwind names below, so a     */
+/* theme is just a different set of these variables.                   */
+/* ------------------------------------------------------------------ */
+:root {
+  --ink: #070b09;
+  --surface: #0e1511;
+  --raised: #15201a;
+  --line: #1d2922;
+  --line-hi: #2a4238;
+  --pine: #2c6a52;
+  --pine-hi: #357c60;
+  --tint: #7fb79a;
+  --bone: #eaf0eb;
+  --muted: #8a9c92;
+  --on-pine: #f1f8f4;
+  --grain-opacity: 0.045;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-line-hi: var(--line-hi);
+  --color-pine: var(--pine);
+  --color-pine-hi: var(--pine-hi);
+  --color-tint: var(--tint);
+  --color-bone: var(--bone);
+  --color-muted: var(--muted);
+  --color-on-pine: var(--on-pine);
+
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* `in-view:` styles apply once an ancestor <Reveal> has scrolled into view. */
+@custom-variant in-view (&:where(.is-in, .is-in *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-ink font-sans text-bone antialiased;
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: var(--pine);
+    color: var(--on-pine);
+  }
+  :focus-visible {
+    outline: 2px solid var(--tint);
+    outline-offset: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ---------------- Motion primitives ---------------- */
+.reveal {
+  opacity: 0;
+  translate: 0 14px;
+  transition:
+    opacity 0.8s var(--ease-brand),
+    translate 0.8s var(--ease-brand);
+  transition-delay: var(--d, 0ms);
+}
+.reveal.is-in {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.rise {
+  display: inline-block;
+  translate: 0 110%;
+  animation: rise 1s var(--ease-brand) forwards;
+  animation-delay: var(--d, 0ms);
+}
+.fade-in {
+  opacity: 0;
+  animation: fade 0.9s var(--ease-brand) forwards;
+  animation-delay: var(--d, 0ms);
+}
+.page-in {
+  animation: page 0.6s var(--ease-brand) both;
+}
+
+@keyframes rise {
+  to {
+    translate: 0 0;
+  }
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes page {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+}
+@keyframes pulse-ring {
+  70% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.live-dot {
+  box-shadow: 0 0 0 0 color-mix(in oklab, var(--tint) 60%, transparent);
+  animation: pulse-ring 2.4s infinite;
+}
+
+/* Film grain: a quiet texture over everything. */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.grid-mesh {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--tint) 16%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--tint) 16%, transparent) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Extends a small link's touch area to ~44px tall without moving anything. */
+.tap {
+  position: relative;
+}
+.tap::after {
+  content: '';
+  position: absolute;
+  inset: -11px -6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+  }
+  .reveal,
+  .fade-in {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .rise {
+    translate: 0 0;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Single-line schematic: a pulse travels the bus while it is on screen. */
+@keyframes bus-x {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes bus-y {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+@keyframes node {
+  0%,
+  9% {
+    background-color: var(--tint);
+    border-color: var(--tint);
+  }
+  22%,
+  100% {
+    background-color: var(--ink);
+    border-color: var(--line-hi);
+  }
+}
+
+/* A pulse of data falling through the three plates of the hero stack. */
+@keyframes drop {
+  0% {
+    transform: translateZ(190px);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(-30px);
+    opacity: 0;
+  }
+}

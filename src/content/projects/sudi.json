@@ -1,0 +1,30 @@
+{
+  "order": 4,
+  "featured": false,
+  "live": false,
+  "slug": "sudi",
+  "title": "SUDI",
+  "org": "Shamos Tech Solutions",
+  "period": "2023 – 2025",
+  "role": "Software Developer Intern",
+  "kind": "platform",
+  "status": "Shipped",
+  "summary": "Marketplace backend where listings, payments, users and live chat work together under load, secured end to end.",
+  "problem": "A marketplace needs listings, payments, user management and live chat to work together under load, and to stay secure while doing it.",
+  "approach": "A REST API on the PERN stack with authentication enforced at every endpoint, a schema tuned for the real query patterns, and a real-time channel alongside it for chat and notifications.",
+  "highlights": [
+    "Built the REST API layer covering users, listings, payments and chat.",
+    "OAuth2 and JWT enforced on every endpoint.",
+    "Designed and optimised the PostgreSQL schema to bring query times down.",
+    "WebSocket messaging and notifications.",
+    "Caching and performance tuning for high-activity periods.",
+    "Unit and integration tests with Jest; automated CI/CD pipeline."
+  ],
+  "outcome": {
+    "label": "Result",
+    "value": "Measurably faster queries under real user load"
+  },
+  "stack": ["PostgreSQL", "Express", "React", "Node.js", "OAuth2", "WebSockets"],
+  "pipeline": ["React client", "OAuth2 / JWT", "Express REST API", "WebSockets", "Cache", "PostgreSQL"],
+  "links": []
+}

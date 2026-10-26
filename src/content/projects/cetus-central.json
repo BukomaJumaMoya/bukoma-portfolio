@@ -1,0 +1,32 @@
+{
+  "order": 1,
+  "featured": true,
+  "live": true,
+  "slug": "cetus-central",
+  "title": "Cetus Central",
+  "org": "Auri Energy Limited",
+  "period": "2025 → present",
+  "role": "R&D Software Developer",
+  "kind": "systems",
+  "status": "Current role",
+  "summary": "Enterprise IoT platform for industrial energy, with real-time ingestion across distributed devices and sub-millisecond state reads.",
+  "problem": "Industrial energy operators need to see grid state in real time, but the data arrives from distributed devices speaking half a dozen incompatible protocols, at a frequency that breaks ordinary request-response architectures.",
+  "approach": "A microservices architecture for real-time ingestion, with Kafka carrying the stream, Redis holding live state and PostgreSQL as the system of record. Reads of current grid state never wait on the write path.",
+  "highlights": [
+    "Designed the microservices architecture for real-time ingestion across distributed systems.",
+    "Built Kafka, Redis and PostgreSQL pipelines tuned for sub-millisecond state reads.",
+    "Implemented event-driven APIs and streaming systems for high-frequency sensor data.",
+    "Integrated MQTT, OPC UA, Modbus and IEC 61850 for grid compliance.",
+    "Built and coordinated six core modules: power quality, fault outage, energy integrity, topology twin, communication data and metering.",
+    "Secured with JWT, RBAC and TLS to regulatory standards.",
+    "Built the database schemas and migration scripts.",
+    "Zero-downtime deployment through Docker and Azure; test suites at roughly 90% coverage."
+  ],
+  "outcome": {
+    "label": "Latency",
+    "value": "Sub-millisecond state reads, ~90% test coverage"
+  },
+  "stack": ["Node.js", "Kafka", "Redis", "PostgreSQL", "Docker", "Azure", "MQTT", "OPC UA", "Modbus", "IEC 61850"],
+  "pipeline": ["Field devices", "MQTT, OPC UA, Modbus, IEC 61850", "Ingestion services", "Kafka", "Redis state + PostgreSQL", "Six domain modules"],
+  "links": []
+}

@@ -1,0 +1,28 @@
+{
+  "order": 5,
+  "featured": false,
+  "live": false,
+  "slug": "kauntabook",
+  "title": "KauntaBook",
+  "org": "Shamos Tech Solutions",
+  "period": "2023 – 2025",
+  "role": "Software Developer Intern",
+  "kind": "platform",
+  "status": "Shipped",
+  "summary": "Serverless SME finance platform: real-time transactions, invoicing and reporting with no servers to manage.",
+  "problem": "Small businesses need transactions, invoicing and reporting that update in real time, without the cost of running servers they don't understand.",
+  "approach": "Serverless end to end: Firebase Functions for the financial logic and Firestore for real-time data, with query and caching work to keep it responsive as usage grew.",
+  "highlights": [
+    "Backend on Node.js and Firebase Functions in a serverless architecture.",
+    "Real-time financial systems for transactions, invoicing and reporting.",
+    "Secure authentication and data protection.",
+    "Firestore query and caching optimisation."
+  ],
+  "outcome": {
+    "label": "Architecture",
+    "value": "Serverless, real-time, no infrastructure to manage"
+  },
+  "stack": ["Node.js", "Firebase Functions", "Firestore", "Serverless"],
+  "pipeline": ["Clients", "Firebase Auth", "Cloud Functions", "Firestore", "Invoices and reports"],
+  "links": []
+}

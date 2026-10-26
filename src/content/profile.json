@@ -1,0 +1,82 @@
+{
+  "name": "Bukoma Juma Moya",
+  "shortName": "Bukoma",
+  "title": "Backend & Distributed Systems Engineer",
+  "role": "R&D Software Developer",
+  "company": "Auri Energy",
+  "location": "Kampala, Uganda",
+  "timezone": "Africa/Kampala",
+  "utc": "UTC+3",
+  "email": "bukomajumamoya@gmail.com",
+  "phone": "+256 774 656464",
+  "siteUrl": "https://bukomajumamoya.vercel.app",
+  "cv": "/cv.pdf",
+  "portrait": "/bukoma-picture.jpeg",
+  "availability": "Open to remote engineering roles",
+  "socials": [
+    {
+      "label": "GitHub",
+      "handle": "BukomaJumaMoya",
+      "href": "https://github.com/BukomaJumaMoya"
+    },
+    {
+      "label": "LinkedIn",
+      "handle": "bukomajumamoya",
+      "href": "https://www.linkedin.com/in/bukomajumamoya/"
+    }
+  ],
+  "principles": [
+    {
+      "title": "Correctness is a feature",
+      "body": "In telemetry, payments and membership records, a fast wrong answer is worse than a slow right one. Design for the failure case first."
+    },
+    {
+      "title": "I've been the customer",
+      "body": "I've run the organisations I build for. I know which features get used and which quietly die in month three."
+    },
+    {
+      "title": "Constraints are the spec",
+      "body": "Offline devices, a July-to-June year, a substation protocol from 2003. The awkward reality is the actual specification."
+    },
+    {
+      "title": "Write it down",
+      "body": "Decision records, migration plans, API documentation. If it only lives in my head, I've built a dependency, not a system."
+    }
+  ],
+  "facts": [
+    {
+      "k": "Current role",
+      "v": "R&D Software Developer, Auri Energy"
+    },
+    {
+      "k": "Focus",
+      "v": "Backend, distributed & real-time systems"
+    },
+    {
+      "k": "Based in",
+      "v": "Kampala, Uganda (UTC+3)"
+    },
+    {
+      "k": "Education",
+      "v": "BSc Information Systems & Technology, Makerere"
+    },
+    {
+      "k": "Core stack",
+      "v": "Node, Spring Boot, PostgreSQL, Kafka, Redis"
+    },
+    {
+      "k": "Also",
+      "v": "Incoming PIME Chair, Rotaract District 9218 (2027)"
+    }
+  ],
+  "organisations": [
+    "Auri Energy Limited",
+    "Whave Solutions",
+    "Shamos Tech Solutions",
+    "Kampala Capital City Authority",
+    "Rotaract District 9218",
+    "Rotaract Club of Kitante",
+    "Fraine Supermarket",
+    "Makerere University"
+  ]
+}

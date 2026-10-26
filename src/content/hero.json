@@ -1,0 +1,39 @@
+{
+  "layers": [
+    {
+      "name": "Devices",
+      "line": "Where the data starts: field devices speaking industrial protocols.",
+      "tools": [
+        "MQTT",
+        "OPC UA",
+        "Modbus",
+        "IEC 61850",
+        "ESP32 + RFID"
+      ],
+      "project": "cetus-central"
+    },
+    {
+      "name": "Services",
+      "line": "Where it moves: event-driven services and streams, secured end to end.",
+      "tools": [
+        "Node.js",
+        "Spring Boot",
+        "Kafka",
+        "Microservices",
+        "JWT and RBAC"
+      ],
+      "project": "sudi"
+    },
+    {
+      "name": "Data",
+      "line": "Where it has to be right: schemas, state and history you can trust.",
+      "tools": [
+        "PostgreSQL",
+        "Redis",
+        "Time-series",
+        "Migrations"
+      ],
+      "project": "district-information-system"
+    }
+  ]
+}
